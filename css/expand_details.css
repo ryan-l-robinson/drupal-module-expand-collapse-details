@@ -1,0 +1,19 @@
+/** Hidden by default, it will only appear when there are details on the page **/
+.block-expand-details {
+    display: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 0.5em;
+  }
+  
+  .expand-details-button {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .expand-details-button:is(:hover, :focus) {
+    background-color: white;
+    color: blue;
+  }
+  
