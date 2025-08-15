@@ -3,4 +3,4 @@ description: "Provides button to expand all details objects on the page."
 package: Custom Content
 type: module
 core_version_requirement: ^10
-php: 8.2
+php: 8.3

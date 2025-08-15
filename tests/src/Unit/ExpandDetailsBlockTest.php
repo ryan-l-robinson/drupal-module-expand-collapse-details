@@ -2,12 +2,11 @@
 
 namespace Drupal\Tests\expand_details\Unit;
 
-use Drupal\Tests\UnitTestCase;
 use Drupal\expand_details\Plugin\Block\ExpandDetailsBlock;
+use Drupal\Tests\UnitTestCase;
 
 /**
- * Tests building of static blocks.
- *
+ * @coversDefaultClass \Drupal\expand_details\Plugin\Block\ExpandDetailsBlock
  * @group expand_details
  */
 class ExpandDetailsBlockTest extends UnitTestCase {
@@ -15,7 +14,7 @@ class ExpandDetailsBlockTest extends UnitTestCase {
   /**
    * Tests building Expand Details block.
    */
-  public function testExpandDetailsBlockBuild() {
+  public function testExpandDetailsBlockBuild(): void {
     include_once DRUPAL_ROOT . "/modules/custom/expand_details/src/Plugin/Block/ExpandDetailsBlock.php";
 
     $block = new ExpandDetailsBlock([
@@ -34,7 +33,6 @@ class ExpandDetailsBlockTest extends UnitTestCase {
             Collapse All -
         </button>
       ', $build['#markup']);
-
   }
 
 }

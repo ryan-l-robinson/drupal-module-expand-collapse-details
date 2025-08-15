@@ -1,5 +1,5 @@
 expand_details:
-  version: 1.x
+  version: 1.0.1
   js:
     js/expand_details.js: {}
   css:

@@ -1,4 +1,4 @@
-(function (Drupal) {
+(function () {
     var detailsElements = document.querySelectorAll('article details');
     // @todo this block ID won't be the same, depending what theme it is included within, so I need to select on something else
     var expandDetailsBlock = document.getElementById('block--expanddetails');
@@ -21,4 +21,4 @@
         });
     }
 
-})(Drupal);
+})();

@@ -3,6 +3,7 @@
 namespace Drupal\expand_details\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Render\Markup;
 
 /**
@@ -33,6 +34,11 @@ class ExpandDetailsBlock extends BlockBase {
         'library' => [
           'expand_details/expand_details',
         ],
+      ],
+      '#cache' => [
+        'contexts' => ['theme'],
+        'tags' => [],
+        'max-age' => Cache::PERMANENT,
       ],
     ];
   }
