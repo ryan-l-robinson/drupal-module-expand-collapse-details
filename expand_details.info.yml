@@ -1,5 +1,5 @@
 name: "Expand Details"
-description: "Provides button to expand all details objects on the page."
+description: "Provides buttons to expand all details objects on the page."
 package: Custom Content
 type: module
 core_version_requirement: ^10

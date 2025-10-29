@@ -23,16 +23,16 @@ class ExpandDetailsBlock extends BlockBase {
   public function build(): array {
     return [
       '#markup' => Markup::create('
-        <button type="button" name="Expand" aria-label="Expand all content on page" class="expand-details-button" id="expand-details-button">
-            Expand All +
+        <button type="button" name="Expand" aria-label="Expand all content on page" class="expand-details-button expand-details-button-expand">
+          Expand All +
         </button>
-        <button type="button" name="Collapse" aria-label="Collapse all content on page" class="expand-details-button" id="collapse-details-button">
-            Collapse All -
+        <button type="button" name="Collapse" aria-label="Collapse all content on page" class="expand-details-button expand-details-button-collapse">
+          Collapse All -
         </button>
       '),
       '#attached' => [
         'library' => [
-          'expand_details/expand_details',
+          'static_blocks/expand_details',
         ],
       ],
       '#cache' => [

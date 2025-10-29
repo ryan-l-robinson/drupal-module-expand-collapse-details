@@ -7,12 +7,13 @@
 }
 
 .expand-details-button {
-  background-color: var(--laurier-gold);
-  color: var(--black);
+  border: 2px solid black;
   border-radius: 5px;
+  background-color: gold;
+  color: black;
 }
 
 .expand-details-button:is(:hover, :focus) {
-  background-color: var(--laurier-purple);
-  color: var(--white);
+  background-color: purple;
+  color: white;
 }

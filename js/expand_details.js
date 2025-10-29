@@ -1,23 +1,29 @@
 (function () {
-    var detailsElements = document.querySelectorAll('article details');
-    // @todo this block ID won't be the same, depending what theme it is included within, so I need to select on something else
-    var expandDetailsBlock = document.getElementById('block--expanddetails');
-    var expandDetailsButton = document.getElementById('expand-details-button');
-    var collapseDetailsButton = document.getElementById('collapse-details-button');
+    // Get details elements, excluding some special cases.
+    var detailsElements = document.querySelectorAll('details:not(.building-hours):not(.captcha):not(.bef--secondary');
+    // Get blocks, which could be more than once.
+    var expandDetailsBlocks = document.querySelectorAll('.block-expand-details-block');
 
-    if (detailsElements.length > 0 && expandDetailsBlock) {
-        expandDetailsBlock.style.display = 'flex';
+    if (detailsElements.length > 0 && expandDetailsBlocks.length > 0) {
+        expandDetailsBlocks.forEach((expandDetailsBlock) => {
+            // Display change is set at the block level.
+            expandDetailsBlock.style.display = 'flex';
 
-        expandDetailsButton.addEventListener("click", () => {
-            detailsElements.forEach((details) => {
-                details.open = true;
-            })
-        });
+            // Assuming that there will only ever be one of each per block.
+            var expandDetailsButton = expandDetailsBlock.querySelector('.expand-details-button-expand');
+            var collapseDetailsButton = expandDetailsBlock.querySelector('.expand-details-button-collapse');
 
-        collapseDetailsButton.addEventListener("click", () => {
-            detailsElements.forEach((details) => {
-                details.open = false;
-            })
+            // Add click actions for each block.
+            expandDetailsButton.addEventListener("click", () => {
+                detailsElements.forEach((details) => {
+                    details.open = true;
+                })
+            });
+            collapseDetailsButton.addEventListener("click", () => {
+                detailsElements.forEach((details) => {
+                    details.open = false;
+                })
+            });
         });
     }
 

@@ -26,10 +26,10 @@ class ExpandDetailsBlockTest extends UnitTestCase {
 
     $this->assertArrayHasKey('#markup', $build);
     $this->assertEquals('
-        <button type="button" name="Expand" aria-label="Expand all content on page" class="expand-details-button" id="expand-details-button">
+        <button type="button" name="Expand" aria-label="Expand all content on page" class="expand-details-button expand-details-button-expand">
             Expand All +
         </button>
-        <button type="button" name="Collapse" aria-label="Collapse all content on page" class="expand-details-button" id="collapse-details-button">
+        <button type="button" name="Collapse" aria-label="Collapse all content on page" class="expand-details-button expand-details-button-collapse">
             Collapse All -
         </button>
       ', $build['#markup']);
