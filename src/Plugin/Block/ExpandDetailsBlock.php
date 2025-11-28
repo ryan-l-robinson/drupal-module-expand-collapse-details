@@ -32,7 +32,7 @@ class ExpandDetailsBlock extends BlockBase {
       '),
       '#attached' => [
         'library' => [
-          'static_blocks/expand_details',
+          'expand_details/expand_details',
         ],
       ],
       '#cache' => [
@@ -44,3 +44,4 @@ class ExpandDetailsBlock extends BlockBase {
   }
 
 }
+
